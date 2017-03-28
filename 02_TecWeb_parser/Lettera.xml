@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<lettera xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Lettera.xsd">
+	<mittente>Nicola</mittente>
+	<destinatario>Filippo</destinatario>	
+	<data>2017-03-27</data>
+	<oggetto>Festa</oggetto>
+	<saluto>Caro Filippo</saluto>
+	<corpo>
+		<paragrafo>vieni giovedì alla festa</paragrafo>
+		<paragrafo>ci divertiamo</paragrafo>
+	</corpo>
+	<chiusura>Fammi sapere</chiusura>
+	<firma>Nicola</firma>	
+</lettera>

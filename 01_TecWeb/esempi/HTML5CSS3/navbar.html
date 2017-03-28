@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Esempio Bootstrap: navbar e modal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default navbar-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Applicazione</a>
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#" role="button" data-toggle="modal" data-target="#primo">Primo</a></li>
+                <li><a href="#" role="button" data-toggle="modal" data-target="#secondo">Secondo</a></li>
+                <li><a href="#" role="button" data-toggle="modal" data-target="#terzo">Terzo</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" role="button" data-toggle="modal" data-target="#destra">A destra</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+	<h1>Un test sulle navbar e le modal</h1>
+	<p>Ridimensiona la dimensione della finestra per vedere l'effetto</p>
+
+	<div>
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#intro">Intro</a></li>
+			<li><a data-toggle="tab" href="#capitolo2">Capitolo 2</a></li>
+			<li class="dropdown">
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#">Capitolo 3 <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a data-toggle="tab" href="#sezione31">Sezione 3.1</a></li>
+					<li><a data-toggle="tab" href="#sezione32">Sezione 3.2</a></li>
+				</ul>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div id="intro" class="tab-pane fade in active">
+				<h3>Introduzione</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sem nulla. Nulla convallis auctor dictum. Pellentesque finibus lacus vel mauris cursus venenatis. Sed metus risus, ornare sit amet est ut, molestie laoreet risus. Proin ac urna a felis rutrum accumsan at id massa. Etiam rutrum enim eget diam cursus euismod. Vestibulum scelerisque finibus euismod. Duis erat libero, efficitur quis fermentum tempus, bibendum vitae lorem. Duis viverra sem et maximus tincidunt. Quisque ut sapien congue sem bibendum hendrerit non semper sapien. Ut mattis dapibus nibh at sollicitudin. Suspendisse et mauris at ex posuere ultrices.</p>
+			</div>
+			<div id="capitolo2" class="tab-pane fade">
+				<h3>Capitolo 2</h3>
+				<p>Donec tristique purus sit amet nisl porta fringilla. Phasellus eget purus vel nulla euismod scelerisque. Nam aliquam dictum nulla, eu suscipit risus ullamcorper eu. Sed elementum blandit mattis. Praesent ornare odio lobortis, fermentum quam non, dignissim nunc. Mauris malesuada, nibh id sagittis sollicitudin, dui mi sodales tortor, id convallis magna nisl vitae sapien. Sed rhoncus commodo orci id accumsan.</p>
+			</div>
+			<div id="sezione31" class="tab-pane fade">
+				<h3>Sezione 3.1</h3>
+				<p>Integer cursus viverra commodo. Phasellus sed mauris scelerisque, pharetra dui eget, bibendum metus. Nullam ex erat, dapibus ac nisl sed, cursus finibus leo. In rhoncus non mauris non pretium. Vestibulum accumsan tellus id scelerisque rutrum. Cras tincidunt, leo at tempor tempus, purus sapien efficitur sapien, non rhoncus ex purus vitae ipsum. Donec vehicula tortor et nibh sollicitudin, et bibendum ligula bibendum. In hac habitasse platea dictumst. Proin consequat pellentesque neque id pulvinar. Nam dui lectus, pulvinar ut turpis vitae, iaculis dignissim arcu. Praesent nisi enim, varius ac molestie at, finibus vel leo. Morbi cursus efficitur tortor vitae tristique. Cras ut sodales massa. Suspendisse et augue justo. Nam pharetra viverra justo at feugiat. Quisque a mauris vitae nunc sodales ultricies.</p>
+			</div>
+			<div id="sezione32" class="tab-pane fade">
+				<h3>Sezione 3.2</h3>
+				<p>Praesent eu lobortis enim, non mattis felis. In volutpat ligula sit amet tristique hendrerit. Nam semper lectus a magna pellentesque, sed lacinia odio egestas. Nam a nulla non justo dictum sagittis. Nulla ac urna sagittis, aliquam lacus non, vehicula nunc. Fusce at justo lorem. Nulla facilisis odio id viverra auctor. Vivamus sit amet ipsum lacus. Nunc a auctor lorem.</p>
+			</div>
+		</div>
+	</div>
+
+</div>    
+
+
+
+<div id="primo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Primo</h4>
+            </div>
+            <div class="modal-body">
+                <p>Questo è il testo del primo modal</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="secondo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Secondo</h4>
+            </div>
+            <div class="modal-body">
+                <p>Questo è il testo del secondo modal</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="terzo" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Terzo</h4>
+            </div>
+            <div class="modal-body">
+                <p>Questo è il testo del terzo modal</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="destra" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Destra</h4>
+            </div>
+            <div class="modal-body">
+                <p>Questo è il testo del modal attivato da destra</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

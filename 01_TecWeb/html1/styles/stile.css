@@ -1,0 +1,38 @@
+body {
+		 background-color: yellow;
+		 color:		purple; 
+		 font-family: verdana;
+}
+
+body a:link{
+	color: green;
+}
+
+body a:visited{
+	color: red;
+}
+ul{
+	width: 100%;
+	padding-left: 0px;
+}
+li.menu{
+	background-color: white;
+	border: 3px;
+	margin:3px;
+	padding: 7px;
+	width:100%;
+	border-right: 5px solid black;
+	list-style-type:none;
+	
+}
+
+div.div1{
+	float:left;
+	width:20%;
+	margin:30px;
+}
+
+div.div2{
+	float:left;
+	width:50%;
+}

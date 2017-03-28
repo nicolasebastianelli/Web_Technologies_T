@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Esempio Bootstrap: la griglia</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h1>Un test sulle griglie</h1>
+  <p>Ridimensiona la dimensione della finestra per vedere l'effetto</p>
+  <div class="row">
+    <div class="col-md-6 col-sm-9 col-xs-12" style="border: 1px dotted red;">
+    	<p>Questo div occupa metà della larghezza (6/12) su schermi di dimensione media, due terzi
+    	(9/12) su schermi piccoli, e l'intera larghezza su schermi molto piccoli. </p>
+      <div class="row">
+        <div class="col-sm-6 col-xs-6" style="border-top: 1px solid red;">
+        	<p>Sempre metà finché ci sta
+        	<span class="glyphicon glyphicon-thumbs-up"></span>
+        	</p>
+        </div>
+        <div class="col-sm-6 col-xs-6" style="border-top: 1px solid red;">
+        	<p>Il raschietto si vede solo su schermi grandi, medi e piccoli.</p>
+        	<img src="raschietto.jpg" class="img-responsive img-circle hidden-xs" />    	 
+		</div>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-3 col-xs-12" style="border: 1px dotted red; background-color:yellow;">
+        <p>Questo div occupa metà della larghezza (6/12) su schermi di dimensione media, un terzo
+    	(9/12) su schermi piccoli, e l'intera larghezza su schermi molto piccoli. </p> 
+	</div>
+  </div>
+</div>
+    
+</body>
+</html>

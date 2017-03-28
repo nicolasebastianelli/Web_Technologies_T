@@ -1,0 +1,88 @@
+/* video.css */
+body {
+		 background-color: rgb(50%, 70%, 100%);
+		 color:						 black 
+}
+
+body.sfondo {
+		 background-image: url("../immagini/sfondo.gif");
+		 background-attachment:
+		 									 fixed   
+}
+
+p { text-align: justify }
+
+table { 
+		 width:            80%;
+		 height:           50%;
+		 text-align:			 center;
+		 margin-left:			 10%;
+		 margin-right:		 10%;
+		 background:			 silver;
+		 color:						 inherit;
+		 border: 					 outset 4pt; 
+     border-collapse:  separate;
+     border-spacing: 	 2pt;
+		 empty-cells: 		 hide 
+}
+
+td {
+	 	 border: inset 3pt
+}
+
+h1 {
+		 font-weight:			 bold;
+		 text-align:			 center;
+		 color:						 blue;
+		 background:			 inherit;
+		 font-family:			 "Arial", sans-serif;
+		 font-size: 			 30pt 
+}
+
+h3 {
+		font-family:			 "Algerian", cursive;
+		font-style:				 italic
+}
+
+img, div.centrato {
+    float: 						 none;
+	  text-align:				 center;
+		cursor:						 crosshair
+}
+
+div.giustificato {
+		float: 						 right;
+		margin: 		 			 2em
+}
+
+a:link    {
+		color: 		 	 		 	 blue;
+		background:  			 inherit;
+		text-decoration:   underline
+}
+a:visited {
+		text-decoration: 	 underline;
+		background:  			 inherit;
+		color:						 white
+}
+a:hover   {
+		font-weight: 			 bolder;
+		color: 			 			 blue; 
+		background:	 			 white;
+}
+ 
+a:active  {
+		color: 			 			 red;
+	  background:	 			 blue;
+}
+
+#speciale {
+	  text-align:				 center;
+		width: 						 400px;
+		margin: 					 40px 50px;
+		padding: 					 15px;
+		border: 					 thick dashed blue;
+		background: 			 yellow;
+		color:						 inherit;
+		text-decoration:	 blink
+}

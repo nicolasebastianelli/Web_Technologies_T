@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name = "author" lang = "it" content = "Lisa Simpson">
+    <meta name = "keywords" lang = "it" content = "simpson, lisa, cucina, letteratura, musica">
+    <meta http-equiv = "Expires" content = "Thu, 01 Dec 2006 12:30:00 GMT">
+	  <meta http-equiv = "Content-Type" content = "text/html; charset=ISO-8859-1">
+    <title>Pagina personale di Lisa Simpson</title>
+    <link rel="stylesheet" href="./stili/video.css" type="text/css" media="screen"> <!-- css -->
+  </head>
+  <body>
+	<div id = "navbar" class = "centrato">
+       <a href="#presentazione">Presentazione </a> &nbsp;
+       <a href="#interessi">Interessi </a> &nbsp;
+      <hr>
+	</div>
+	    <h1> Pagina personale di <em>Lisa Simpson</em></h1>
+	  <div class = "centrato">  <!-- css -->
+      <!-- Uso di object per gif non supportato in Microsoft Internet Explorer
+		  <object data="./immagini/foto.gif" type = "image/gif">
+		   Questa &eacute; la foto di <em>Lisa Simpson</em>.
+	    </object>
+		  -->
+		  <img src="immagini/foto.gif" alt = "Questa &eacute; la foto di Lisa Simpson">
+	  </div>
+	  <div>
+		  <!-- Uso di object per midi non supportato in Microsoft Internet Explorer
+			<object data = "./suoni/simpsons.mid" type = "audio/x-midi">
+			  <param name="autostart" value="true"> 
+		    La sigla <em>The Simpsons</em>.
+			</object>
+			-->
+			<embed src="suoni/simpsons.mid" autostart = "true" width="0" height="0">
+	  </div>
+	  <h2 id = "presentazione" >Presentazione</h2>
+      <p>Sono nata a <strong>Springfield</strong>, dove vivo tutt'ora nella mia
+      <a href = "./immagini/casa.png">casa</a> con la mia
+		  <a href = "./famiglia.html">famiglia</a>.
+      Le mie principali passioni sono la
+      <a href = "#letteratura">letteratura</a>, la
+		  <a href = "#musica">musica</a> e la
+		  <a href = "#cucina">cucina</a>.
+		  Potete contattarmi tramite la posta elettronica all'indirizzo
+      <a href= "mailto:lisa@simpson.org?subject=Ciao%20Lisa">lisa@simpson.org</a>
+			 oppure tramite il telefono al numero <strong>0123-1234567</strong>.</p>
+		<h2 id = "interessi">I miei interessi</h2>
+		  <h3 id = "letteratura">Letteratura</h3>
+      <p>Alcuni versi della <q>Canci&oacute;n de los amantes muertos</q> di <em>P. Neruda</em>.</p>
+      <blockquote><pre>
+&Eacute;l dec&iacute;a: &laquo; Tu peque&ntilde;ita
+mano en mis labios &raquo;.
+
+     Perdonal&oacute;, Se&ntilde;or!
+
+Miraban juntos las estrellas.
+No hablaban de amor.
+      </pre></blockquote>
+      <h3 id = "cucina">Cucina</h3>
+      <div class = "giustificato"> <!-- css -->
+	      <!-- Uso di object per gif non supportato in Microsoft Internet Explorer
+		    <object  data="./immagini/alimenti.gif" type = "image/gif">
+		    Tavola bandita
+	      </object>
+	      -->
+		    <img src="immagini/alimenti.gif" alt = "Tavola bandita">
+		  </div>
+		  <p>Ecco una ricetta <cite>da leccarsi i baffi</cite>.</p>
+		    <h4>Risotto ai carciofi</h4>
+		    <dl>
+		      <dt>Gli ingredienti:</dt>
+		     <dd>
+           <ul>
+           <li>80 g. di riso integrale
+           <li>100 g. di carciofi
+           <li>10 g. di olio extravergine di oliva
+           <li>sale marino integrale
+           </ul>
+         </dd>
+       	 <dt>La procedura:</dt>
+	       <dd>
+           <ol>
+		         <li>Pulite i carciofi e tagliateli a fettine cuocendoli in
+						 padella con pochissimo olio e acqua a fuoco lento.
+             <li>Unite riso precedentemente ammollato; fate insaporire
+		         per qualche minuto e regolate di sale.
+		         <li>Aggiungete acqua a 100<sup>o</sup>C e portate a cottura.
+           </ol>
+         </dd>
+		     <dt>Note:</dt>
+         <dd>
+		        Ricco di ferro, fosforo, vitamina B<sub>2</sub> e vitamina PP,
+						&egrave; un piatto adatto a tutti.
+		     </dd>
+         </dl>
+      <h3 id = "musica">Musica</h3>
+	      <div class = "centrato"> <!-- css  -->
+        <table summary="Brani preferiti" cellspacing = "10" cellpadding = "10" border = "1">
+          <caption><em>Brani musicali di mio gradimento</em></caption>
+          <tr><th rowspan = "2">
+              <th colspan = "2">Caratteristiche
+              <th rowspan = "2">File<BR>midi
+          <tr><th>durata (s.)
+              <th>dimensioni (kb)
+          <tr><th>The Simpsons
+          <td>87<td>18<td><a href="./suoni/simpsons.mid" type="audio/x-midi" 
+														 target = "nuovo">Play</a>
+          <tr><th>Gmasock</th><td>56<td>16<td><a href="./suoni/gmasock.mid" type="audio/x-midi"
+														 target = "nuovo">Play</a>
+        </table>
+	      </div>
+  </body>
+</html>
