@@ -1,0 +1,43 @@
+<html>
+<head>
+<link type="text/css" href="styles/default.css" rel="stylesheet"></link>
+<link type="text/css" href="styles/soluzione-particomuni.css" rel="stylesheet"></link>
+<link type="text/css" href="styles/soluzione-tabella.css" rel="stylesheet"></link>
+</head>
+<body>
+
+		Questa &egrave; una tabella, le cui celle consentono di inviare dati tramite una form:
+		<form method="post" action="http://localhost:9999/osservami-nel-tunnel-anche-se-ancora-non-abbiamo-un-server-a-cui-inviare-dati">
+			<table class="formdata">
+				<tr>
+					<th></th>
+					<th scope="col">A</th>
+					<th scope="col">B</th>
+					<th scope="col">C</th>
+					<th scope="col">D</th>
+				</tr>
+				<tr>
+					<th scope="row">1</th>
+					<td><input type="text" name="A1" id="A1" value="cella A1"/></td>
+					<td><input type="text" name="B1" id="B1" value="cella B1"/></td>
+					<td><input type="text" name="C1" id="C1" value="cella C1"/></td>
+					<td><input type="text" name="D1" id="D1" value="cella D1"/></td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td><input type="text" name="A2" id="A2" value="cella A2"/></td>
+					<td colspan="2"><input type="text" name="B2" id="B2" value="contenuto presente all'interno della cella B2"/></td>
+					<td rowspan="2"><textarea type="text" name="D2" id="D2">contenuto presente all'interno della cella D2</textarea></td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td><input type="text" name="A3" id="A3" value="cella A3"/></td>
+					<td><input type="text" name="B3" id="B3" value="cella B3"/></td>
+					<td><input type="text" name="C3" id="C3" value="cella C3"/></td>
+				</tr>
+			</table>
+			<input type="submit" value="Una form HTML richiede un pulsante di invio!"/>
+		</form>
+		
+</body>
+</html>

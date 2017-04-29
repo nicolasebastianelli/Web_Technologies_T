@@ -1,0 +1,63 @@
+<html>
+
+	<head>
+
+		<title>Un semplice esempio di pagina HTML</title>
+
+		<link type="text/css" href="styles/default.css" rel="stylesheet"></link>
+		<link type="text/css" href="styles/soluzione-particomuni.css" rel="stylesheet"></link>
+		<link type="text/css" href="styles/soluzione-lista.css" rel="stylesheet"></link>
+		<link type="text/css" href="styles/soluzione-paragrafi.css" rel="stylesheet"></link>
+		<link type="text/css" href="styles/soluzione-iframe.css" rel="stylesheet"></link>
+
+	</head>
+
+	<body>
+	
+		<div id="header">
+			<h1>Un semplice esempio di pagina HTML</h1>
+			<h2>Confrontate il sorgente con il rendering eseguito dal browser!</h2>
+		</div>
+		
+		<hr/>
+
+		<div id="lista" class="myDiv">
+			Questa &egrave; la lista degli elementi di interesse presenti nella pagina:
+			<ul>
+				<li>
+					<a href="#lista">una lista</a>
+				</li>
+				<li>
+					<a href="#paragrafi">paragrafi e immagini</a>	
+				</li>
+				<li>
+					<a href="#inlineFrame">un iframe contenente una tabella</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="paragrafi" class="myDiv">
+			<img src="images/immagine.png" alt="immagine che manca volutamente"/>
+			<p class="beforeImage">
+				Questo &egrave; un paragafo. Che contiene del testo. Molto testo. Molto, moltissimo testo. Tanto da occupare piu' di una riga: bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla, bla.....
+			</p>
+			<p class="afterImage">
+				Questo &egrave; un altro paragrafo.
+			</p>
+		</div>
+		
+		<div id="inlineFrame" class="myDiv">
+			Questo &egrave; un iframe
+			:
+			<br/>
+			<iframe name="theIFrame" src="soluzione-tabella.html" ></iframe>
+			<a href="esercizio.html" target="theIFrame">Questo collegamento apre il testo del prossimo esercizio all'interno dell'iframe</a>.
+		</div>
+		
+		<div id="goBack" class="myDiv">
+				<a class="clickMe" href="#header">torna su</a>
+		</div>
+
+  </body>
+
+</html>

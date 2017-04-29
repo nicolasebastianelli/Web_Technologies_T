@@ -1,0 +1,59 @@
+/* 
+ogni div occupa un'altezza sufficiente a far si' che la pagina "scrolli" verticalmente
+e sia possibile dimostrare l'utilizzo di anchor con query fragment (#idParteRiferita)
+*/		
+.myDiv { height: 800px; padding: 15px; }
+
+img {
+	height: 100px;
+	border: 1px solid gray;
+}
+
+/*
+alcuni elementi distintivi (sfondo, bordo, ecc...) per far capire che e' presente una tabella,
+al di la' della disposizione del testo all'interno di una griglia regolare
+*/			
+table { border: 1px solid black; }
+td,th { border: 1px solid black; text-align: center; padding: 10px; }
+
+/*
+iframe
+*/
+iframe { height: 500px; width: 100%; frameborder: 1px; marginheight: 5px; marginwidth: 5px; scrolling: auto; }
+
+/*
+elementi che non scrollano con il resto della pagina
+*/				
+#firebugBookmarklet { 
+	position: fixed; left: 0px; top: 750px; font-family: Arial; font-style: italic; font-size: xx-small; 
+}
+#goBack { 
+	position: fixed; right: 0px; top: 0px; height: auto;
+	/* notare le differenze nel box-model di user-agent diversi */
+	border: 1px solid blue;
+	background: lightGray;
+	margin: 15px;
+	padding: 30px;
+}
+/*
+look and feel da pulsante, anche se si tratta di un anchor
+*/
+.clickMe {
+	background: #009;
+	color: white;
+	font-weight: bolder;
+	font-style: italic;
+	padding-right: 5px;
+	padding-left: 5px;
+	border: 3px;
+	border-color: gray;
+} 			
+/*
+remove the underline. Typically it's done so that the underline appears only when a hover occurs. 
+*/
+.clickMe:link, .clickMe:visited, .clickMe:active {
+	text-decoration: none;
+}
+.clickMe:hover {
+	color: blue; background: white;
+}

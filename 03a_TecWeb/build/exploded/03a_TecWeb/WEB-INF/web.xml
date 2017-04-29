@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+ <!-- 1) General -->
+ <!-- Name the application -->
+ <display-name>03a_TecWeb</display-name>
+ <description> A servlet-based project to use
+as a template for your owns </description>
+
+ <!-- 2) Servlets -->
+ <servlet>
+<servlet-name>HelloWorld</servlet-name>
+ <servlet-class>
+it.unibo.tw.web.HelloWorldServlet
+ </servlet-class>
+ </servlet>
+
+ <!-- Map some URL's to the servlet -->
+ <servlet-mapping>
+ <servlet-name>HelloWorld</servlet-name>
+ <url-pattern>/helloworld</url-pattern>
+ </servlet-mapping>
+ <!-- 3) Welcome Files -->
+ <!-- Define, in order of preference, which file to
+show when no filename is defined in the path -->
+ <welcome-file-list>
+ <welcome-file>test.html</welcome-file>
+ <welcome-file>home.html</welcome-file>
+ </welcome-file-list>
+
+ <!-- 4) Error Handler -->
+ <!-- Define an error handler for 404 pages -->
+ <error-page>
+ <error-code>404</error-code>
+ <location>/errors/notfound.html</location>
+ </error-page>
+ <!-- Define an handler for java.lang.Exception -->
+ <error-page>
+ <exception-type>
+java.lang.Exception
+ </exception-type>
+ <location>/errors/exception.html</location>
+ </error-page>
+</web-app>

@@ -1,0 +1,32 @@
+/*
+look and feel da foglio di calcolo
+*/			
+table.formdata {
+	border: 1px solid #5F6F7E;
+	border-collapse: collapse;
+}
+table.formdata th {
+	border: 1px solid #5F6F7E;
+	background-color: #E2E2E2;
+	color: #000000;
+	text-align: left;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: 0;
+}
+table.formdata td {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #E2E2E2;
+	height: 100%;
+}
+table.formdata input, textarea {
+	width: 100%;
+	height: 100%;
+	padding: 2px 4px 2px 4px;
+	margin: 0;
+	border: 2px solid #ffffff;
+}
+.formdata input:focus, textarea:focus {
+	border: 2px solid #000000;
+}

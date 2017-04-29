@@ -1,0 +1,13 @@
+/*
+lasciamo che l'immagine scorra a destra del testo
+*/
+img {
+	float: right;
+}
+/*
+ma solo per il primo paragrafo
+*/
+p.afterImage {
+	clear: both;
+}
+

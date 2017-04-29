@@ -1,0 +1,52 @@
+body {
+ font-family: Verdana, Helvetica, sans-serif;
+ font-size: 9pt;
+ background: #FFF;
+ color: #000;
+}
+
+h1 {
+ font-size: 12pt;
+ border-bottom: 1px solid silver;
+ color: #009;
+}
+
+dt {
+ font-size: 10pt;
+ color: #006;
+}
+
+.clickMe {
+ background: #009;
+ color: white;
+ font-weight: bolder;
+ padding-right: 5px;
+ padding-left: 5px;
+ border: 3px;
+ border-color: gray;
+} 
+
+div {
+ margin-bottom: 10px;
+}
+
+li.item {
+ list-style-image: url("rss.jpg");
+ margin: 10px;
+ padding: 10px;
+}
+
+.content {
+ width: 50%;
+ height: 50px;
+}
+
+table {
+	margin: 20px;
+	border: 2px solid black;
+}
+
+th {
+	background-color: grey;
+	border: 1px solid black;
+}

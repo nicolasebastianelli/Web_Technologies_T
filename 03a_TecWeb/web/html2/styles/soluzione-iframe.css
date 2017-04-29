@@ -1,0 +1,12 @@
+iframe { 
+/*
+modificato il vincolo sull'altezza minima
+*/
+	height: 200px;
+}
+#inlineFrame a {
+	visibility: hidden;
+/*
+notare che senza specificare display:none, lo spazio nella pagina rimarra' occupato lo stesso
+*/	
+}

@@ -1,0 +1,54 @@
+body {
+/*
+un font decente, ereditato da tutti gli elementi dentro il body
+*/
+	font-family: Verdana, Helvetica, sans-serif;
+/*
+senza imporre lo sfondo bianco, alcuni user-agent lasciano che l'iframe 
+erediti lo sfondo dell'elemento in cui e' contenuto
+*/
+	background: white;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+
+hr {
+/*
+garantiamoci respiro, per poter collocare le tab
+*/
+	margin-bottom: 100px;
+}
+
+
+
+/*
+obiettivo: compattare i div e dar loro l'aspetto di riquadri ben visibili e definiti
+*/
+.myDiv { 
+/*
+aspetto da box colorati
+*/
+	border: 1px solid #204a87; background: #729fcf; color: #eeeeec; 
+/* 
+rimosso il vincolo all'altezza minima di ogni div
+*/		
+	height: auto;
+}
+
+
+
+/*
+togliamo di mezzo quello che non ci serve
+*/
+#goBack, #firebugBookmarklet { 
+/*
+invisibilita'
+*/
+	visibility: hidden; 
+/*
+mancata occupazione di spazio nella pagina
+*/
+	display: none; 
+}
