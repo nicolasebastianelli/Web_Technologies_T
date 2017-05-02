@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="-1"/>
+    <title>Javascript e gli eventi DHTML</title>
+    <script><!--
+
+	    // We can't manipulate the DOM until the document is fully loaded
+	    
+	    window.onload = function(){
+	        // Find all the <li> elements, to attach the event handlers to them
+	        var li = document.getElementsByTagName("li");
+	        for ( var i = 0; i < li.length; i++ ) {
+	             // Attach a mouseover event handler to the <li> element,
+	             // which changes the <li>s background to blue.
+	             li[i].onmouseover = function() {
+	                 this.style.backgroundColor = 'blue';
+	             };
+                 // Attach a mouseout event handler to the <li> element
+                 // which changes the <li>s background back to its default white
+                 li[i].onmouseout = function() {
+                     this.style.backgroundColor = 'white';
+                 };
+            }
+        };
+
+	    function addText() {
+    	   var divElement;
+           var divText;
+           divElement = document.getElementById("addTextHere");
+           divText = document.createTextNode("Si, anche cliccando succede qualcosa.");
+           divElement.appendChild(divText);
+	    }
+	   	       
+	       
+       //--></script>
+		<link rel="stylesheet" href="../styles/default.css" type="text/css"/>
+   </head>
+   <body>
+	    <h1>Javascript e gli eventi DHTML</h1>
+	    <p class="test">Attraverso il 'modello a oggetti del documento' (DOM) &egrave; possibile far interagire il browser con il contenuto visualizzato, in maniera dinamica.
+	    </p>
+	    <ul>
+	         <li >pur con diverse sfumature, il concetto di DOM &egrave; supportato da praticamente tutti i browser moderni e da moltissimi strumenti e librerie per lo sviluppo di applicazioni (Java, Javascript, ..e non solo!)</li>
+	         <li >la struttura ad albero del DOM e l'identificazione degli elementi e attributi al suo interno &egrave; semplice da apprendere e usare</li>
+	         <li onmousedown="addText();">e ci sono spesso diversi modi di fare cose simili...</li>
+	    </ul>
+	    
+	    <div id="addTextHere">
+	    </div>
+	    
+   </body>
+</html>

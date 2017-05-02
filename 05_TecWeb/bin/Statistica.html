@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="-1"/>
+	<script type="text/javascript" src="Statistica.js"></script>
+	<title>Statistica</title>
+</head>
+<body>
+	<script type="text/javascript"><!--
+		var error= false;
+		var errorval = "none";
+		var listavoti = prompt("Inserisci i tuoi voti:");
+		if(listavoti == null || listavoti == ""){
+			error = true;
+			errorval = " input vuoto";
+		}
+		else{
+			var voto = listavoti.split(" ");
+			for(i=0;i<voto.length;i++){
+				if(isNaN(voto[i])){
+					error = true;
+					errorval = voto[i] + " non e un numero";
+				}
+				else if(eval(voto[i]) <18 || eval(voto[i]) > 33){
+					error = true;
+					errorval = voto[i] + " maggiore di 33 o minore di 18";
+				}
+			}
+				
+		}
+		//--></script>
+		
+	<p id="errormessage" style="display:none"></p>
+	<table id="tabella">
+			<tr>
+				<td>Voti: </td>
+				<td><p id="voti">none</p></td>
+			</tr>
+			<tr>
+				<td>Minimo: </td>
+				<td><p id="minimo">none</p></td>
+			</tr>
+			<tr>
+				<td>Massimo: </td>
+				<td><p id="massimo">none</p></td>
+			</tr>
+			<tr>
+				<td>Media: </td>
+				<td><p id="media">none</p></td>
+			</tr>
+			<tr>
+				<td>Variabilità: </td>
+				<td><p id="variabilita">none</p></td>
+			</tr>	
+		</table>
+		<script type="text/javascript"><!--
+		if(error==true){
+			document.getElementById("errormessage").innerHTML = "errore in: " + errorval;
+			var errormessage = document.getElementById("errormessage");
+			var tabella = document.getElementById("tabella");
+			errormessage.style.display= 'block';
+			tabella.style.display= 'none';
+		}
+		document.getElementById("voti").innerHTML = voto;
+		document.getElementById("minimo").innerHTML =minimo(voto)
+		document.getElementById("massimo").innerHTML =massimo(voto)
+		document.getElementById("media").innerHTML =media(voto)
+		document.getElementById("variabilita").innerHTML =variabilita(voto,media(voto))
+		//--></script>
+</body>
+</html>

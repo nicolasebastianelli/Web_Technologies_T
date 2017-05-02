@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="-1"/>
+	<title>Validazione di form sul browser</title>
+	<script type="text/javascript" src="../scripts/validator.js"></script>
+	<link rel="stylesheet" href="../styles/default.css" type="text/css"/>
+</head>
+<body>
+	<h1>Iscrizione (fittizia) a una mailing list</h1>
+	<p>Fornire le seguenti informazioni:</p>
+	<form name="mailinglistform" action="subscription.html" method="post" onSubmit="return ( validEmail(document.mailinglistform.email) && nonBlank(document.mailinglistform.nickname) );">
+		<table>
+			<tr>
+				<td>Nick name:<br/>(min. 1 carattere)</td>
+				<td><input type="text" name="nickname"/></td>
+			</tr>
+			<tr>
+				<td>Indirizzo email:</td>
+				<td><input type="text" name="email" value=""/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" name="proceed" value="Invia"/></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="-1"/>
+    <title>Javascript e il DOM</title>
+    <script><!--
+    
+	    // We can't manipulate the DOM until the document
+	    // is fully loaded
+
+	    function decora(){
+	        // Find all the <li> elements in the document
+	        var li = document.getElementsByTagName("li");
+	        // and add a border around all of them
+	        for ( var j = 0; j < li.length; j++ ) {
+	             li[j].style.border = "1px solid #000";
+	        }
+	        // Locate the element with the ID 'toHide'
+	        var toHide = document.getElementById( "toHide" );
+	        // and remove it from the document
+	        toHide.parentNode.removeChild( toHide );
+
+	    };
+
+	    
+    //--></script>
+	<link rel="stylesheet" href="../styles/default.css" type="text/css"/>
+</head>
+<body>
+    <h1>Javascript e il DOM</h1>
+    <p class="test">Attraverso il 'modello a oggetti del documento' (DOM) &egrave; possibile far interagire il browser con il contenuto visualizzato, in maniera dinamica.
+    </p>
+    <ul>
+         <li class="test">pur con diverse sfumature, il concetto di DOM &egrave; supportato da praticamente tutti i browser moderni e da moltissimi strumenti e librerie per lo sviluppo di applicazioni (Java, Javascript, ..e non solo!)</li>
+         <li class="test">la struttura ad albero del DOM e l'identificazione degli elementi e attributi al suo interno &egrave; semplice da apprendere e usare</li>
+         <li id="toHide">come sempre, occorre per&ograve; prestare attenzione ad alcuni particolari (ad esempio, in questa pagina non abbiamo aspettato il completamento del caricamento, prima di intervenire sul contenuto)!</li>
+    </ul>
+    
+    <p>
+    Premendo il seguente 'controllo' adesso, invece, la funzione di decoro ottiene gli effetti voluti!<br/>
+    <span onclick="decora()" class="clickMe">decora</span>
+    </p>
+</body>
+</html>

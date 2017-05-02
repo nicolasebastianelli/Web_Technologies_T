@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="-1"/>
+		<title>Rollover di immagini</title>
+		<link rel="stylesheet" href="../styles/default.css" type="text/css"/>
+		<style type="text/css">
+			a { display:block; height: 130px; width: 115px; }
+			a:link { background-image: url("../images/mouse_out.gif"); } /* non visisted link */      
+			a:visited { background-image: url("../images/mouse_out.gif");}  /* visited link */
+			a:hover  { background-image: url("../images/mouse_over.gif"); }  /* mouse over link */
+			a:active { background-image: url("../images/mouse_out.gif"); }      /* selected link */
+		</style>
+	</head>
+	<body>
+
+<!-- ===================================== -->
+
+<p> Il modo pi&ugrave; semplice di fare rollover (solo CSS e pseudo-classi), tuttavia possibile solo in presenza di pesudo-classi!</p>
+<a href="rollover.html"></a>
+
+<!-- ===================================== -->
+
+<p> Un modo semplice di fare rollover (solo DOM ed eventi DHTML)</p>
+<img src="../images/mouse_out.gif" 
+   alt="Image not found"
+   onMouseOver="this.src = '../images/mouse_over.gif';"
+   onMouseOut="this.src = '../images/mouse_out.gif';"/>
+
+<!-- ===================================== -->
+
+<p>Un modo appena pi&ugrave; riutilizzabile di fare la stessa cosa (con Javascript, nel sorgente della pagina): </p>
+  <script type="text/javascript"><!--
+	    function rollImageById( img_id, img_file) {
+			// alert(img_id);
+	       var image = document.getElementById(img_id);
+			image.src = img_file;
+     }
+	//--></script>
+<img src="../images/mouse_out.gif" id="rollingImageId"
+   alt="Image not found"
+   onMouseOver="rollImageById(this.id,'../images/mouse_over.gif');"
+   onMouseOut="rollImageById(this.id,'../images/mouse_out.gif');"/>
+
+<!-- ===================================== -->
+
+<p> Oppure, sempre con Javascript (vedi sorgente): </p>
+  <script type="text/javascript"><!--
+		function rollImageByName( img_name, img_file) {
+			alert(img_name);
+    	}
+	//-->
+	</script>
+<img src="../images/mouse_out.gif" name="rollingImageName"
+   alt="Image not found"
+   onMouseOver="rollImageByName(this.name,'../images/mouse_over.gif');"
+   onMouseOut="rollImageByName(this.name,'../images/mouse_out.gif');"/>
+
+</body>
+
+</html>
+

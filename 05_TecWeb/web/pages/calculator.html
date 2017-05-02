@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="-1"/>
+		<title>Calcolatrice</title>
+		<link rel="stylesheet" href="../styles/default.css" type="text/css"/>
+		<script type="text/javascript"><!--
+
+			function compute(f) {
+				//var r = f.op1.value + f.op2.value;
+				var r = eval(f.op1.value) + eval(f.op2.value);
+				if ( r == f.sum.value ) {
+					f.out.value = "corretto!";
+				}
+				else {
+					f.out.value = "sbagliato! Fa " + r + " :) !!";
+				}
+			}
+
+			function fill() {
+				var f = document.getElementById('calc');
+				f.op1.value = Math.floor(Math.random()*11);
+				f.op2.value = Math.floor(Math.random()*11);
+			}
+		--></script>
+
+	</head>
+	<body onload="fill();">
+	
+		<p>Inserisci il risultato della seguente espressione:</p>
+	
+		<form id="calc">
+			<input disabled="disabled" type="text" name="op1" size="15" >+
+			<input disabled="disabled" type="text" name="op2" size="15" >=
+			<input type="text" name="sum" size="15">
+			<input type="button" value="Verifica"
+			onClick="compute(this.form)"><br/>
+			<br/>
+			Risultato:
+			<b>
+			<input class="trasp" type="text" name="out" disabled="disabled"/>
+			</b>
+		</form>
+	
+	</body>
+
+</html>
+

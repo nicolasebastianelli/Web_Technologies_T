@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="-1"/>
+	<script type="text/javascript" src="DHTML.js"></script>
+	<title>Javascript and DHTML</title>
+</head>
+<body>
+	<fieldset>
+	<legend>Questionario:</legend>
+		<h1 align="left" id="hour"></h1>
+		<script type="text/javascript">
+		document.getElementById("hour").innerHTML=onLoad();
+		setInterval(function(){document.getElementById("hour").innerHTML=onLoad()},1000);
+		</script>
+		<div align="left">
+			<form id="myForm">
+				<table style="border-spacing:10px">
+					<tr style="vertical-align:bottom">
+						<td><p>Il tuo nome:</p></td>
+						<td><p>Password:</p></td>
+						<td><p>Nome del file:</p></td>
+						<td><p>Quali dei miei figli preferisci?:</p></td>
+						<td><p>Chi &egrave il pi&ugrave divertente?:</p></td>
+					</tr>
+					<tr style="vertical-align:top">
+						<td><input type="text" name="nome" size="15" ></td>	
+						<td><input type="password" name="pass" size="15" ></td>
+						<td><input type="file" name="file" size="15" ></td>
+						<td><input type="checkbox" name="check1"  value="bart" size="15">Bart<br>
+							<input type="checkbox" name="check2"  value="lisa" size="15">Lisa<br>
+							<input type="checkbox" name="check3"  value="maggie" size="15">Maggie<br>
+						</td>
+						<td><input type="radio" checked name="radiocharacter" value="homer" size="15">Homer<br>
+							<input type="radio" name="radiocharacter" value="bart" size="15">Bart<br>
+							<input type="radio" name="radiocharacter" value="lisa" size="15">Lisa<br>
+						</td>
+					</tr>
+					<tr style="vertical-align:bottom">
+						<td><p>Scegli dei passatempi:</p></td>
+						<td><p>Il tuo colore preferito:</p></td>
+						<td><p>Eventi in ingresso:</p></td>
+					</tr>
+					<tr style="vertical-align:top">
+						<td>
+							<select name="hobby" multiple>
+								<option value="musica">musica</option>
+								<option value="sport">sport</option>
+								<option value="viaggi">viaggi</option>
+								<option value="letteratura">letteratura</option>
+							</select>						
+						</td>	
+						<td>
+							<select name="colore" single>
+								<option value="rosso">rosso</option>
+								<option value="blu">blu</option>
+								<option value="giallo">giallo</option>
+								<option value="arancione">arancione</option>
+								<option value="verde">verde</option>
+								<option value="viola">viola</option>
+							</select>
+						</td>							
+						<td colspan="3">
+							<textarea id="eventi" disabled rows="20" cols="85">
+							</textarea>
+						</td>
+					</tr>
+				</table>
+				<div align="left">
+					Pulsanti:
+					<input type="button" name="svuotaeventi" value="svuota eventi" onclick="svuotaEventi()">
+					<input type="submit" name="sottometti" value="sottometti">
+					<input type="reset" name="azzera" value="azzera">
+				</div>
+			</form>
+		</div>
+	</fieldset>
+	<fieldset>
+	<legend>Messaggi:</legend>
+		<p>Inserisci un breve messaggio:</p>
+		<textarea id="messaggio" rows="5" cols="30" onmouseover="changeColor()" onmouseout="resetColor()"onkeyup="refreshChar()">
+		</textarea>
+		<br>
+		<input type="text" disabled id="charleft" size="2" value="64" >
+	</fieldset>
+	<script type="text/javascript">
+		var events = ["click", "keyup", "focus","blur","select","dblclick","mouseover","mouseout"];
+		var nelem=document.getElementById("myForm").elements.length;
+		for(i=0;i<nelem;i++){
+			for(j=0;j<events.length;j++){
+				document.getElementById("myForm").elements[i].addEventListener(events[j],function(e){ Events(this,e.type);},true);
+			}
+		}
+	</script>
+</body>
+</html>

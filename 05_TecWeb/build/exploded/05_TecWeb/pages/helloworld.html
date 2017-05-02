@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="-1"/>
+		<title>Ciao mondo</title>
+		<link rel="stylesheet" href="../styles/default.css" type="text/css" />
+	</head>
+	<body>
+
+		<p>Invocazione di una funzione predefinita...</p>
+			
+		<script type="text/javascript"><!--
+
+				alert("Hello World!");
+
+		//--></script>
+
+		<p>...e definizione di una funzione che non viene mai invocata...</p>
+			
+		<script type="text/javascript"><!--
+
+				function unUsed() {
+					alert("Hello World, di nuovo!");
+				}
+		//--></script>
+
+		<p class="piccolino">(ps: avete notato che il secondo paragrafo non e' comparso fino a che non avente chiuso il messaggio popup? <br/>
+		<b>La funzione <code>alert()</code> e' sincrona e bloccante: non permette al renderer di proseguire la valutazione della pagina!</b>
+		</p>
+	
+		<script type="text/javascript"><!--
+
+				var capito = confirm("Capito?");
+				if ( capito ) {
+					document.write('Bene, proseguiamo.');
+				}
+				else {
+			        // notate l'alternanza tra apice singolo e virgolette.. 
+					document.write('<a href="helloworld.html">Di nuovo.</a>');
+				}
+				
+		//--></script>
+
+		<p class="piccolino">
+		<b>La funzione <code>confirm()</code> restituisce addirittura un risultato che si puo' utilizzare nel proseguimento del rendering!</b>
+		</p>
+
+	</body>
+</html>
+
