@@ -1,0 +1,28 @@
+<html>
+
+	<head>
+
+		<title>DOM modifications fail before the onload event</title>
+		<script type="text/javascript" src="scripts/utils.js"></script>
+		<script type="text/javascript" src="scripts/almostajax.js"></script>
+		
+		<script type="text/javascript">
+		<!--
+		// invocazione del metodo javascript importato nel secondo script qui sopra 
+		almostAJAX('paragrafo');
+		//-->
+		</script>
+
+	</head>
+
+	<body>
+		
+		<p id="paragrafo">
+			testo del paragrafo che non verr&agrave; cambiato dopo il caricamento del documento
+		</p>
+
+		<a href="index.html">back</a>
+		
+	</body>
+
+</html>

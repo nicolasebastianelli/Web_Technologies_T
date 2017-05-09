@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" >
+
+<head>
+	<title>Secondo esempio di AJAX (sempre da HTML.it)</title>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+	<link rel="StyleSheet" href="styles/somestyle.css" type="text/css" media="all" />
+	<script type="text/javascript" src="scripts/utils.js"></script>
+	<script type="text/javascript" src="scripts/rssparser.js"></script>
+</head>
+
+<body>
+
+	<div>
+		
+		<h1>Parsing di un contenuto XML</h1>
+	    
+		<div>
+			<p>Inserisci la categoria di notizie da consultare:</p>
+			<form><input type="text" id="category" value="" onKeyUp="caricaFeed(  'contents/feed.jsp?category='+myGetElementById('category').value, myGetElementById('feed') )"/></form>
+			<div id="feed"/>
+		</div>
+
+	</div>
+	<a href="index.html">back</a>
+	
+	<br/>
+	<br/>
+	
+	<p>
+	(n.b.: questo &egrave; un tipico esempio di come troppe richieste AJAX possano 'uccidere' il server e del modo in cui le applicazioni web 2.0 
+	non dovrebbero essere fatte: aprite il monitor HTTP per rendervi conto di quanto viene bombardato!!)
+	</p>
+	
+</body>
+
+</html>
