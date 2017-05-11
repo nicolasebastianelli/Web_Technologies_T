@@ -14,9 +14,17 @@
         <servlet-name>WaitingServlet</servlet-name>
         <servlet-class>it.unibo.tw.web.servlets.WaitingServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FeedServlet</servlet-name>
+        <servlet-class>it.unibo.tw.web.servlets.FeedServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>WaitingServlet</servlet-name>
         <url-pattern>/waitingServlet</url-pattern>
+     </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>FeedServlet</servlet-name>
+ 		<url-pattern>/feedServlet</url-pattern>
     </servlet-mapping>
 
 	<!-- Handle exceptions and errors -->

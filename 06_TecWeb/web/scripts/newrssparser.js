@@ -1,3 +1,4 @@
+
 /*
  * Funzione per estrarre il contenuto CDATA presente
  * all'interno di un nodo XML 
@@ -7,9 +8,6 @@
  */
 
 
-function leggiContenuto(item, nomeNodo) {
-	return item.getElementsByTagName(nomeNodo).item(0).firstChild.nodeValue;
-};
 
 /*
  * Funzione che genera una lista XHTML 
@@ -17,27 +15,27 @@ function leggiContenuto(item, nomeNodo) {
  * ricevuto come argomento xml
  */
 
-function parsificaXml( xml ) {
+function parsificaJSON( strJSON ) {
 
 	// variabili di funzione
 	var
 
 	// Otteniamo la lista degli item dall'RSS 2.0 di edit
-	items = xml.getElementsByTagName("item"),
+	items = JSON.parse(strJSON)
 
 	// Predisponiamo una struttura dati in cui memorrizzare le informazioni di interesse
-	itemNodes = new Array(),
+	itemNodes = new Array()
 
 	// la variabile di ritorno, in questo esempio, e' testuale
 	risultato = "";
 
 	// ciclo di lettura degli elementi
-	for (    var a = 0, b = items.length;    a < b;   a++   ) {
+	for (    var a = 0, b = items.Feed.length;    a < b;   a++   ) {
 		// [length al posto di push serve per evitare errori con vecchi browser]
 		itemNodes[a] = new Object();
-		itemNodes[a].title = leggiContenuto(items[a],"title");
-		itemNodes[a].description = leggiContenuto(items[a],"description");
-		itemNodes[a].link = leggiContenuto(items[a],"link");
+		itemNodes[a].title = items.Feed[a].Titolo
+		itemNodes[a].description = items.Feed[a].Descrizione
+		itemNodes[a].link = items.Feed[a].Link
 	}// for ( items )
 
 	// non resta che popolare la variabile di ritorno
@@ -59,7 +57,7 @@ function parsificaXml( xml ) {
 	// restituzione dell'html da aggiungere alla pagina
 	return risultato;
 
-}// parsificaXml()
+}// parsificaJSON()
 
 
 
@@ -82,16 +80,8 @@ function callback( theXhr, theElement ) {
 		// verifica della risposta da parte del server
 		if ( theXhr.status === 200 ) {
 			// operazione avvenuta con successo
-			if ( theXhr.responseXML ) {
-				theElement.innerHTML = parsificaXml(theXhr.responseXML);
-			}// if XML
-			else {
-				// visualizzazione contenuto letto
-				// evitando di scrivere la risposta 
-				// in modo interpretabile dal browser
-				theElement.innerHTML = "L'XML restituito dalla richiesta non e' valido.<br />" +
-				theXhr.responseText.split('<').join("&lt;").split('>').join("&gt;");
-			}// else (if ! XML)
+				var str = theXhr.responseText;
+				theElement.innerHTML = parsificaJSON(str);
 		}// if 200
 
 		else {

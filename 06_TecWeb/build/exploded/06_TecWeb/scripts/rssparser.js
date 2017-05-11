@@ -5,6 +5,8 @@
  *
  * Utile a far rimanere leggibile il codice di parsificaXml() 
  */
+
+
 function leggiContenuto(item, nomeNodo) {
 	return item.getElementsByTagName(nomeNodo).item(0).firstChild.nodeValue;
 };
@@ -14,6 +16,7 @@ function leggiContenuto(item, nomeNodo) {
  * con gli item presi dal testo RSS (linguaggio basato su xml)
  * ricevuto come argomento xml
  */
+
 function parsificaXml( xml ) {
 
 	// variabili di funzione

@@ -25,9 +25,18 @@ public class FeedDb implements Serializable {
 				"http://www.lastampa.it/redazione/cmssezioni/politica/200902images/sardegna01p.jpg"
 			);
 		this.feeds.add(feed);
-		
 		feed = new Feed(
-				"\"Tariffe cambiate senza informare gli utenti\". Maxi-multa dell'Antitrust ai colossi telefonici",
+				"Prova",
+				"Bassa l'affluenza: alle 11 aveva votato meno del 55% dei cittadini. <br/>Occhi sulla poltrona di governatore: il leader Pd prova a difenderla.",
+				"",
+				"POLITICA",
+				"Mon, 16 Feb 2009 15:58:35 +0200",
+				"http://www.lastampa.it/redazione/cmsSezioni/politica/200902articoli/41071girata.asp",
+				"http://www.lastampa.it/redazione/cmssezioni/politica/200902images/sardegna01p.jpg"
+			);
+		this.feeds.add(feed);
+		feed = new Feed(
+				"Tariffe cambiate senza informare gli utenti. Maxi-multa dell'Antitrust ai colossi telefonici",
 				"Sanzionati Tim e Vodafone con una contravvenzione di 500 mila euro. Cambiavano i piani senza dare informazioni adeguate ai consumatori. <em>Altroconsumo</em>: serve una class action.",
 				"",
 				"ECONOMIA",
@@ -38,8 +47,8 @@ public class FeedDb implements Serializable {
 		this.feeds.add(feed);
 		
 		feed = new Feed(
-				"Del Noce:  \"Sanremo risorge o muore\"",
-				"Il direttore di Rai 1: \"O arriveranno i risultati o &egrave; crisi. Pretestuose le polemiche sui compensi\". Bonolis su Povia: \"Arcigay mosso da rabbia\"<BR>" +
+				"Del Noce:   Sanremo risorge o muore",
+				"Il direttore di Rai 1: O arriveranno i risultati o &egrave; crisi. Pretestuose le polemiche sui compensi. Bonolis su Povia: \"Arcigay mosso da rabbia\"<BR>" +
 				"<DIV style=\"PADDING-TOP: 6px\"><DIV><SPAN class=boxocchiello><FONT face=Georgia color=#e2021c size=1>FOTO </FONT></SPAN><A class=link href=\"/multimedia/multimedia.asp?IDmsezione=17&amp;IDalbum=15725&amp;tipo=FOTOGALLERY\" target=_self><FONT color=#2f302f>La gag di Del Noce e Bonolis</FONT></A><SPAN class=boxocchiello><FONT face=Georgia color=#e2021c size=1> FOTO </FONT></SPAN><A class=link href=\"/multimedia/multimedia.asp?IDmsezione=17&amp;IDalbum=15728&amp;tipo=FOTOGALLERY\" target=_self><FONT color=#2f302f>GiovedÃ¬ Kevin Spacey sul palco</FONT></A></DIV></DIV>",
 				"",
 				"SPETTACOLI",
@@ -50,8 +59,8 @@ public class FeedDb implements Serializable {
 		this.feeds.add(feed);
 
 		feed = new Feed(
-				"Alla sbarra i pirati del Web: \"Andr&agrave;  tutto bene\"",
-				"A Stoccolma si apre il processo contro i responsabili di piratebay.org dopo anni di battaglia fra multinazionali, polizia e attivisti della Rete. Gli imputati sicuri: \"Non abbiamo paura\".",
+				"Alla sbarra i pirati del Web: Andr&agrave;  tutto bene",
+				"A Stoccolma si apre il processo contro i responsabili di piratebay.org dopo anni di battaglia fra multinazionali, polizia e attivisti della Rete. Gli imputati sicuri: Non abbiamo paura.",
 				"",
 				"TECNOLOGIA",
 				"Mon, 16 Feb 2009 15:58:35 +0200",
