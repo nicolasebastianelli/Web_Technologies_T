@@ -26,8 +26,8 @@ public class DataSource {
         String password = "";
         switch ( this.usedDb ) {
             case DB2:
-            	userName = "00722894";
-            	password = "Nicola31";
+            	userName = "xxx";
+            	password = "yyy";
 
                 driver = "com.ibm.db2.jcc.DB2Driver";
                 dbUri = "jdbc:db2://diva.deis.unibo.it:50000/"+dbName;
