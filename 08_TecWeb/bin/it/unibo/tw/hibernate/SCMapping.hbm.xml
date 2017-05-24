@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="it.unibo.tw.hibernate.SCMapping" table="scmapping">
+    <composite-id>
+    	<key-property name="idStudent" column="idStudent"/>
+   	 	<key-property name="idCourse" column="idCourse"/>
+	</composite-id>
+  </class>
+</hibernate-mapping>

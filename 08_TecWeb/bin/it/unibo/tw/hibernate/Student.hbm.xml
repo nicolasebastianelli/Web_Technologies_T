@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="it.unibo.tw.hibernate.Student" table="students">
+    <id name="id" column="id" />
+    <property name="firstName" column="firstName"/>
+    <property name="lastName" column="lastName"/>
+    <property name="birthDate" column="birthDate"/>
+  </class>
+</hibernate-mapping>
