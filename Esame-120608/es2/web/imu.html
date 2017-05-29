@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="Author" content="Nicola Sebastianelli">
+		<title>Index</title>
+		<script type="text/javascript" src="scripts/imuajax.js"></script>
+		<script type="text/javascript" src="scripts/utils.js"></script>
+		<link type="text/css" href="styles/default.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>ESAME TECNOLOGIE WEB</h1>
+		<fieldset>
+				Codice fiscale (16 lettere): <input type="text" id="cf" onkeyup=
+				"checkImu(myGetElementById('rendita').value, 
+					myGetElementById('cf').value, 
+					myGetElementById('output'))"><br>
+				Rendita: <input type="text" id="rendita" ><br><br><br>
+				Lista IMU confermati: <ul id="output"></ul>
+				
+				
+		</fieldset>
+	</body>
+</html>

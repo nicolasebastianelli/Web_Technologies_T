@@ -1,0 +1,22 @@
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="Author" content="Nicola Sebastianelli">
+		<title>Index</title>
+		<link type="text/css" href="styles/default.css" rel="stylesheet"/>	
+	</head>
+	<body>
+		<h1>CAMBIA DATE</h1>
+		<a href="richiestaLibri.html">Richiesta Libri</a><br><br>
+		<fieldset>
+			<form method="post" action="cambiamenti">
+				<label>Codice fiscale: </label><input type="text" name="codiceFiscale" max="12"><br>
+				<label>Titolo: </label><input type="text" name="titolo"><br>
+				<label>Prelievo: Mese: </label><input type="number" name="mesePrelievo" min=1 max =12 value=1><label>		Giorno: </label><input type="number" name="giornoPrelievo" min=1 max =30 value=1><br>
+				<label>Consegna: Mese: </label><input type="number" name="meseConsegna" min=1 max =12 value=1><label>		Giorno: </label><input type="number" name="giornoConsegna" min=1 max =30 value=1><br>
+				<input type="submit" id="cambia" value="cambia"><br>
+			</form>
+		</fieldset>
+	</body>
+</html>
