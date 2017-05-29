@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="it.unibo.tw.beans.Party" table="party">
+  	<id name="id" column="id" >
+  		<generator class="increment"/>
+  	</id>
+    <property name="titolo" column="titolo" />
+    <property name="luogo" column="luogo"/>
+    <property name="data" column="data"/>
+    <set name="partecipanti" table="party_partecipanti" inverse="true">
+   		<key column="idparty"/>
+   		<many-to-many column="idpartecipante" class="it.unibo.tw.beans.Partecipante"/>
+  	</set>
+  </class>
+</hibernate-mapping>
