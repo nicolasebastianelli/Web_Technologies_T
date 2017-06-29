@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ShowRoom</title>
+<link rel="stylesheet" href="ShowRoom.css" type="text/css"></link>
+<script src="ShowRoom.js">
+</script>
+</head>
+<body>
+	<div id="left">
+	<a href="http://www.logomaker.it"><img src="show.jpg" alt="show.jpg"/></a>
+	<ul>
+	<li><button onclick="show('A')">A</button></li>
+	<li><button onclick="show('B')">B</button></li>
+	<li><button onclick="show('C')">C</button></li>
+	<li><button onclick="show('D')">D</button></li>
+	</ul>
+	<button onclick="showRegistratiForm()">Registrati</button>
+	</div>
+	<div id="right">
+		<div class="titolo">
+			Let's go shopping		
+		</div>
+		<div class="resto">
+		<form id="login" name="registrati" action="" onsubmit="return validateLoginForm(this); return false;">
+			<textarea name="login" required rows="1" cols="12" placeholder="login" onblur="checkNoNumber(this)"></textarea> 
+			<br />
+			<textarea name="pwd" required rows="1" cols="8" placeholder="pwd" onblur="checkNoNumber(this)"></textarea> 
+			<br />
+			<input type="submit" name="action" value="INVIA">
+		</form>
+		<hr/>
+		<span id="immagini">
+		</span>
+		<form hidden id="registrati" name="registrati" action="" onsubmit="return validateLoginForm(this); return false;">
+			<textarea name="nome" required rows="1" cols="40" placeholder="nome"  onblur="checkNoNumber(this)"></textarea> 
+			<br />
+			<textarea name="cognome" required rows="1" cols="40" placeholder="cognome" onblur="checkNoNumber(this)"></textarea> 
+			<br />
+			<textarea name="email" required rows="1" cols="30" placeholder="email" onblur="checkNoNumber(this)"></textarea> 
+			<br />
+			<textarea name="login" required rows="1" cols="12" placeholder="login" onblur="checkNoNumber(this)"></textarea> 
+			<br />
+			<textarea name="pwd" required rows="1" cols="8" placeholder="pwd" onblur="checkPwd(this)"></textarea> 
+			<br />
+			<textarea name="pwd2" required rows="1" cols="8"placeholder="pwd" onblur="checkPwd(this)"></textarea> 
+			<br />
+			<input type="submit" name="action" value="INVIA">
+		</form>
+		</div>
+		</div>
+</body>
+</html>

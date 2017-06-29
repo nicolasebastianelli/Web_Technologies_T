@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login page</title>
+<link rel="stylesheet" href="Evento.css" type="text/css"></link>
+<script src="Evento.js">
+</script>
+</head>
+<body onload="main()">
+	<div id="left">
+	<span class="vertical">Welcome@MioEvento</span>
+	<form hidden name="partecipanti" action="" onsubmit="validateForm(this); return false;">
+		<textarea name="partecipanti" rows="1" cols="12" placeholder="partecipanti"></textarea> 
+		<br />
+		<input type="submit" name="action" value="OK">
+	</form>
+	</div>
+	<div id="center"></div>
+	<div id="right">
+		<div id="results" hidden>
+		Totale <span id="Tot" ></span><br/>
+		M <span id="M" ></span><br/>
+		F <span id="F" ></span><br/>
+		Elenco <br/><ol id="list"><ol/>
+		</div>
+	</div>
+</body>
+</html>

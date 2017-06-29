@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login page</title>
+<link rel="stylesheet" href="MioProdotto.css" type="text/css"></link>
+<script src="forms.js">
+</script>
+<script src="utils.js" type="text/javascript">
+</script>
+</head>
+<body onload="setListeners(myGetElementById('tabella'))">
+	<div id="header">
+	<span class="left">MioProdotto</span>
+	<span class="right">
+	<a href="http://www.iodesigner.it"><img src="logo.jpg" alt="Logo"></img></a>
+	<form name="login" action="" onsubmit="validateLoginForm(this)">
+		<textarea name="login" rows="1" cols="12" onkeyup="checkLogin(this)">Login</textarea> 
+		<br />
+		<textarea name="password" rows="1" cols="8" onblur="checkPwd(this)">pwd</textarea> 
+		<input type="submit" name="action" value="OK">
+	</form>
+	</span>
+	</div>
+		<div id="body">
+		<table>
+		<tbody id="tabella">
+		<tr>
+		<th>CategoriaA</th><th>CategoriaB</th><th>CategoriaC</th><th>CategoriaD</th><th>CategoriaE</th>
+		</tr>
+		<tr>
+		<td>SottocategoriaA1</td><td>SottocategoriaB1</td><td>SottocategoriaC1</td><td>SottocategoriaD1</td><td>SottocategoriaE1</td>
+		</tr>
+		<tr>
+		<td>SottocategoriaA2</td><td>SottocategoriaB2</td><td>SottocategoriaC2</td><td>SottocategoriaD2</td><td>SottocategoriaE2</td>
+		</tr>
+		<tr>
+		<td>SottocategoriaA3</td><td>SottocategoriaB3</td><td>SottocategoriaC3</td><td>SottocategoriaD3</td><td>SottocategoriaE3</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<div id="footer">
+			<img id="img1"/><br/>
+			<img id="img2"/><br/>
+			<img id="img3"/><br/>
+			<img id="img4"/>
+		</div>
+</body>
+</html>
