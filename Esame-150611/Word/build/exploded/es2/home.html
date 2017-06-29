@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="Author" content="Nicola Sebastianelli">
+		<title>Index</title>
+		<script type="text/javascript" src="scripts/ajax.js"></script>
+		<script type="text/javascript" src="scripts/utils.js"></script>
+		<link type="text/css" href="styles/default.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>ESAME TECNOLOGIE WEB</h1>
+		<fieldset>
+				<form>
+				<label>Righe: </label><input type="number" max=99 min=10 required id="num"><br>
+				<input type="submit" value=ok onClick="ValidaRiga(myGetElementById('num').value,myGetElementById('output'))"><br>
+				<label>Stato: </label><label id="output"></label><br>
+				</form>
+		</fieldset>
+	</body>
+</html>
