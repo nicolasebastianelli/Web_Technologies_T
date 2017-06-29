@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<meta name="Author" content="Nicola Sebastianelli">
+		<title>Index</title>
+		<script type="text/javascript" src="scripts/ajax.js"></script>
+		<script type="text/javascript" src="scripts/utils.js"></script>
+		<link type="text/css" href="styles/default.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>ESAME TECNOLOGIE WEB</h1>
+		<fieldset>
+				Massimo: <input type="text" id="max" onkeyup="checkMaxMin(myGetElementById('max'))"><br>
+				Minimo: <input type="text" id="min" onkeyup="checkMaxMin(myGetElementById('min'))"><br>
+				Citta: <input type="text" id="citta" onkeyup="checkCitta(myGetElementById('citta').value, myGetElementById('output'))"><br>
+				<input type="button" id="show" onclick="show(myGetElementById('citta').value,myGetElementById('max').value,myGetElementById('min').value,myGetElementById('output'))" value="show">
+				<div id="output"></div>
+		</fieldset>
+	</body>
+</html>

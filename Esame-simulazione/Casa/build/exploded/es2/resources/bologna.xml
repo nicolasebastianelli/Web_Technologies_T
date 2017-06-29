@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<citta nome="bologna">
+ <casa>
+ <indirizzo>via Sant Isaia 42</indirizzo>
+ <prezzo>650</prezzo>
+ </casa>
+ <casa>
+ <indirizzo>piazza San Francesco 45</indirizzo>
+ <prezzo>750</prezzo>
+ </casa>
+ <casa>
+ <indirizzo>piazza Malpighi 40</indirizzo>
+ <prezzo>720</prezzo>
+ </casa>
+</citta>
