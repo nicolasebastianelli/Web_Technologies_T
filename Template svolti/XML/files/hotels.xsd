@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="navigazione" type="navigazioneType"/>
+	
+	<xs:complexType name="navigazioneType">
+		<xs:sequence>
+			<xs:element name="utente" minOccurs="1" maxOccurs="1"
+				type="utenteType" />
+			<xs:element name="ricerca" maxOccurs="unbounded" type="ricercaType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="utenteType">
+		<xs:sequence>
+			<xs:element name="mail" type="mailType" minOccurs="1"
+				maxOccurs="1" />
+			<xs:element name="pass" type="passType" minOccurs="1"
+				maxOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="ricercaType">
+		<xs:sequence>
+			<xs:element name="nazione" minOccurs="1" maxOccurs="1"
+				type="xs:string" />
+			<xs:element name="citta" minOccurs="1" maxOccurs="1"
+				type="xs:string" />
+			<xs:element name="stelle" minOccurs="1" maxOccurs="1"
+				type="stelleType" />
+			<xs:element name="fascia" minOccurs="0" maxOccurs="1"
+				type="fasciaType" />
+			<xs:element name="risultato" maxOccurs="unbounded"
+				minOccurs="0" type="risultatoType" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="risultatoType">
+		<xs:sequence>
+			<xs:element name="nomehotel" minOccurs="1" maxOccurs="1"
+				type="xs:string" />
+			<xs:element name="foto" minOccurs="1" maxOccurs="1" type="fotoType" />
+			<xs:element name="giudizio" minOccurs="1" maxOccurs="1"
+				type="giudizioType" />
+			<xs:element name="prezzo" minOccurs="1" maxOccurs="1"
+				type="euroType" />
+			<xs:element name="link" minOccurs="1" maxOccurs="1"
+				type="complexLink">
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="stelleType">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="([1-5]){1}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="fasciaType">
+		<xs:choice>
+			<xs:element name="bassa" type="bassaType" />
+			<xs:element name="media" type="mediaType" />
+			<xs:element name="alta" type="altaType" />
+			<xs:element name="lusso" type="lussoType" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:simpleType name="bassaType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="1" />
+			<xs:maxExclusive value="50" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="mediaType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="50" />
+			<xs:maxInclusive value="120" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="altaType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="121" />
+			<xs:maxInclusive value="180" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="lussoType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:minInclusive value="181" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="euroType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="passType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value=".*[0-9].*[!?*$].*|.*[!?*$].*[0-9].*" />
+			<xs:length value="8" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="mailType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value=".*@.*\..*" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="fotoType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value=".*\.jpg" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="giudizioType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="eccellente|buono|medio|sufficiente|mediocre" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="linkType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="http[s]?:\/\/www..*" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="complexLink">
+		<xs:sequence>
+			<xs:element name="indirizzo" type="linkType" />
+		</xs:sequence>
+		<xs:attribute name="cliccato" type="xs:boolean" use="required" />
+	</xs:complexType>
+
+
+</xs:schema>

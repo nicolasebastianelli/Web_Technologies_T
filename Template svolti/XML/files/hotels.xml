@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navigazione xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="hotels.xsd">
+	<utente>
+		<mail>mail1@mail.it</mail>
+		<pass>pass1wd!</pass>
+	</utente>
+	<ricerca>
+		<nazione>italia</nazione>
+		<citta>bolo</citta>
+		<stelle>4</stelle>
+		<fascia>
+			<media>100</media>
+		</fascia>
+		<risultato>
+			<nomehotel>Hotel1</nomehotel>
+			<foto>hotel1.jpg</foto>
+			<giudizio>eccellente</giudizio>
+			<prezzo>100</prezzo>
+			<link cliccato="true" >
+				<indirizzo>https://www.</indirizzo>
+			</link>
+		</risultato>
+		<risultato>
+			<nomehotel>Hotel2</nomehotel>
+			<foto>hotel2.jpg</foto>
+			<giudizio>buono</giudizio>
+			<prezzo>120</prezzo>
+			<link cliccato="true" >
+				<indirizzo>https://www.</indirizzo>
+			</link>
+		</risultato>
+	</ricerca>
+</navigazione>

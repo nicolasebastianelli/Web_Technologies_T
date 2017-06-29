@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login page</title>
+<link rel="stylesheet" href="Form.css" type="text/css"></link>
+<script src="forms.js">
+</script>
+<script src="utils.js" type="text/javascript">
+</script>
+</head>
+<body>
+	<div id="upper">Welcome@UtentiForm</div>
+	<div id="lower">
+		<form name="login" action="" onsubmit="return validateForm(this)">
+			<input type="text" name="mail" required placeholder="mail" on="validEmail(this)"><br>
+			<input type="password" name="pass" required placeholder="pass" maxlength="8" onblur="checkPass(this)"><br>
+		    <input type="text" name="nazione"  placeholder="nazione" ><br>
+		    <input type="text" name="citta"  placeholder="citta" ><br>
+		    Stelle: <input type="number" name="star" min=1 max =5 value=1 ><br>
+			<select name="fascia">
+				<option value="bassa" selected>< 50€</option>
+				<option value="media" >[50€-120€]</option>
+				<option value="alta">[121€-180€]</option>
+				<option value="lusso" >> 181€</option>
+			</select><br/>
+			<input type="submit" name="action" value="INVIO">
+			<input type="reset" name="action" value="RESET">
+		</form>
+	</div>
+</body>
+</html>
