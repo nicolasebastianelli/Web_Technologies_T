@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="it.unibo.tw.beans.Paziente" table="paziente">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codiceFiscale" unique="true" not-null="true"
+			column="codiceFiscale" />
+		<property name="nome" not-null="true" column="nome" />
+		<property name="cognome" not-null="true" column="cognome" />
+		<property name="sesso" not-null="true" column="sesso" />
+		<set name="richiesteMediche" table="richieste_mediche">
+			<key column="paziente_id"></key>
+			<one-to-many class="it.unibo.tw.beans.RichiestaMedica" />
+		</set>
+	</class>
+
+	<class name="it.unibo.tw.beans.RichiestaMedica" table="richiesta_medica">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<natural-id>
+			<property name="codicePaziente" not-null="true" column="codicePaziente" />
+			<property name="data" not-null="true" column="data" />
+		</natural-id>
+		<property name="nomeMedico" not-null="true" column="nomeMedico" />
+		<many-to-one name="paziente" class="it.unibo.tw.beans.Paziente"
+			column="paziente_id" />
+		<set name="accertamenti" table="accertamento">
+			<key column="richiesta_medica_id"></key>
+			<one-to-many class="it.unibo.tw.beans.Accertamento" />
+		</set>
+	</class>
+
+	<class name="it.unibo.tw.beans.Accertamento" table="accertamento">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codice" not-null="true" unique="true" column="codice" />
+		<property name="esito" not-null="false" column="esito" />
+		<many-to-one name="tipoAccertamento" class="it.unibo.tw.beans.TipoAccertamento"
+			column="tipo_accertamento_id" />
+		<many-to-one name="richiestaMedica" class="it.unibo.tw.beans.RichiestaMedica"
+			column="richiesta_medica_id" />
+	</class>
+
+	<class name="it.unibo.tw.beans.TipoAccertamento" table="tipo_accertamento">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codice" not-null="true" unique="true" column="codice" />
+		<property name="descrizione" column="descrizione" />
+		<set name="accertamentiDiQuestoTipo" table="accertamento">
+			<key column="tipo_accertamento_id"></key>
+			<one-to-many class="it.unibo.tw.beans.Accertamento" />
+		</set>
+		<set name="struttureCheLoOffrono" table="TipoAccertamento_Struttura"
+			inverse="true">
+			<!-- colonna della tabella di mezzo che fa riferimento a questa classe -->
+			<key column="tipo_accertamento_ids" />
+			<!-- colonna della tabella di mezzo che fa riferimento all'altra classe -->
+			<many-to-many column="struttura_ids" class="it.unibo.tw.beans.Struttura" />
+		</set>
+	</class>
+
+	<class name="it.unibo.tw.beans.Struttura" table="struttura">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codice" not-null="true" unique="true" column="codice" />
+		<property name="nome" not-null="true" column="nome" />
+		<property name="indirizzo" not-null="true" column="indirizzo" />
+		<set name="tipiDiAccertamentoOfferti" table="TipoAccertamento_Struttura"
+			inverse="false">
+			<!-- colonna della tabella di mezzo che fa riferimento a questa classe -->
+			<key column="struttura_ids" />
+			<!-- colonna della tabella di mezzo che fa riferimento all'altra classe -->
+			<many-to-many column="tipo_accertamento_ids"
+				class="it.unibo.tw.beans.TipoAccertamento" />
+		</set>
+	</class>
+	
+</hibernate-mapping>
