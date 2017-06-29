@@ -1,0 +1,5 @@
+cane gatto mucca 
+cane mucca 
+cane lepre mucca 
+gatto mucca 
+cane gatto lepre 
