@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="it.unibo.tw.beans.Accertamento" table="accertamenti">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codice" not-null="true" unique="true" column="codice" />
+		<property name="nome" not-null="false" column="nome" />
+		<property name="descrizione" not-null="false" column="descrizione" />
+		<many-to-one name="tipoAccertamento" class="it.unibo.tw.beans.TipoAccertamento"
+			column="tipo_accertamento_id" />
+	</class>
+
+	<class name="it.unibo.tw.beans.TipoAccertamento" table="tipo_accertamento">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codice" not-null="true" unique="true" column="codice" />
+		<property name="descrizione" column="descrizione" />
+		<set name="accertamenti" table="accertamento">
+			<key column="tipo_accertamento_id"></key>
+			<one-to-many class="it.unibo.tw.beans.Accertamento" />
+		</set>
+		<set name="ospedali" table="TipoAccertamento_Ospedale"
+			inverse="true">
+			<!-- colonna della tabella di mezzo che fa riferimento a questa classe -->
+			<key column="idtipiaccertamento" />
+			<!-- colonna della tabella di mezzo che fa riferimento all'altra classe -->
+			<many-to-many column="idospedale" class="it.unibo.tw.beans.Ospedale" />
+		</set>
+	</class>
+
+	<class name="it.unibo.tw.beans.Ospedale" table="ospedali">
+		<id name="id" column="id">
+			<generator class="increment"></generator>
+		</id>
+		<property name="codice" not-null="true" unique="true" column="codice" />
+		<property name="nome" not-null="true" column="nome" />
+		<property name="indirizzo" not-null="true" column="indirizzo" />
+		<property name="citta" not-null="true" column="citta" />
+		<set name="tipiaccertamento" table="TipoAccertamento_Ospedale"
+			inverse="false">
+			<!-- colonna della tabella di mezzo che fa riferimento a questa classe -->
+			<key column="idospedale" />
+			<!-- colonna della tabella di mezzo che fa riferimento all'altra classe -->
+			<many-to-many column="idtipiaccertamento"
+				class="it.unibo.tw.beans.TipoAccertamento" />
+		</set>
+	</class>
+	
+</hibernate-mapping>

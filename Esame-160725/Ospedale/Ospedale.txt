@@ -1,0 +1,12 @@
+Query 1: Nome accertamenti: 
+n2
+n3
+n1
+
+Query 2: Ospedali: 
+Policlinico S.Orsola-Malpighi, bologna, indirizzo1, 2
+
+struttura2, bologna, indirizzo2, 2
+
+struttura3, bologna, indirizzo3, 2
+
